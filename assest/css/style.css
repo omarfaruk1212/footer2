@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'poppins';
+    font-size: 15px;
+}
+body{
+    display: flex;
+    background-color: #333;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+}
+
+/* footer area  */
+.footer{
+    position: relative;
+    width: 100%;
+    background: #ff6900;
+    min-height: 100px;
+    padding: 3% 5%;
+    text-align: center;
+    color: #fff;
+}
+a{
+    color: #fff;
+}
+
+.logo a{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom:70%;
+}
+
+.wave{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url('../images/bg.png');
+    background-size: 1000px 100px;
+   
+}
+.wave:nth-of-type(1){
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: anim 4s linear infinite;
+}
+
+.wave:nth-of-type(2){
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: anim2 4s linear infinite !important;
+}
+
+.wave:nth-of-type(3){
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: anim 3s linear infinite !important;
+}
+
+.wave:nth-of-type(4){
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: anim2 3s linear infinite !important;
+}
+
+@keyframes anim {
+    0%{
+        background-position-x: 1000px;
+    }
+
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+@keyframes anim2 {
+    0%{
+        background-position-x: -1000px;
+    }
+
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+.row{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+ .row .col p{
+    width: 50%;
+    line-height: 20px;
+    margin: 10px 0;
+ }
+ 
+
+ .text-area ul li{
+    font-size: 15px;
+    margin: 10px;
+    font-weight: 600;
+    transition: .6s;
+} 
+.text-area ul li:hover{
+transform: translateY(5px);
+}
+.social{
+    display: flex;
+    gap: 20px;
+}
+
+.social li{
+    height: 44px;
+    width: 44px;
+    border:1px solid #fff;
+    border-radius: 50%;
+    transition: .6s;
+    position: relative;
+}
+
+.social li i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    transition: .6s;
+}
+
+.social li:hover{
+background-color: #fff;
+cursor: pointer;
+transform: translateY(-5px);
+
+}
+.social li:hover i{
+    color: #ff6900;
+}
